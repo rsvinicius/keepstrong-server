@@ -1,10 +1,10 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    id("org.springframework.boot") version "2.7.3"
-    id("io.spring.dependency-management") version "1.0.13.RELEASE"
-    kotlin("jvm") version "1.6.21"
-    kotlin("plugin.spring") version "1.6.21"
+    id("org.springframework.boot") version "3.0.2"
+    id("io.spring.dependency-management") version "1.1.0"
+    kotlin("jvm") version "1.7.22"
+    kotlin("plugin.spring") version "1.7.22"
 }
 
 group = "com.keepstrong"
@@ -15,12 +15,12 @@ repositories {
     mavenCentral()
 }
 
-extra["springCloudVersion"] = "2021.0.4"
+extra["springCloudVersion"] = "2022.0.1"
 
 dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-    implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-server")
+    implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-server:4.0.0")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
